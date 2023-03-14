@@ -19,7 +19,7 @@
         <section class="grid grid-cols-3 gap-5 w-3/4 mx-auto mb-12">
             <div class="bg-green-400 p-8 text-white rounded-xl">
                 <h3 class="text-3xl">Deposit</h3>
-                <h2 class="text-5xl mt-3">$ 00</h2>
+                <h2 class="text-5xl mt-3">$ <span id="deposit-total">00</span></h2>
             </div>
             <div class="bg-yellow-400 p-8 text-white rounded-xl">
                 <h3 class="text-3xl">Withdraw</h3>
@@ -33,21 +33,21 @@
 
         <!-- Deposit & Withdraw Section  -->
         <section class="grid grid-cols-2 gap-5 w-3/4 mx-auto">
-            <div class="bg-fuchsia-300 p-8 text-white rounded-xl">
-                <h3 class="text-3xl">Please Deposit</h3>
+            <div class="bg-fuchsia-300 p-8 rounded-xl">
+                <h3 class="text-3xl text-white">Please Deposit</h3>
 
                 <div class="ml-7 mt-5">
-                    <input class="block w-full px-4 py-2 mb-5 text-1xl" type="email" name="" id="user-email"
+                    <input class="block w-full px-4 py-2 mb-5 text-1xl" type="text" name="" id="user-deposit"
                         placeholder="$ Amount You Want to Deposit">
-                    <button id="btn-submit"
+                    <button id="btn-deposit"
                         class="bg-amber-700 text-white text-2xl px-4 py-2 rounded-lg">Deposit</button>
                 </div>
             </div>
-            <div class="bg-sky-300 p-8 text-white rounded-xl">
-                <h3 class="text-3xl">Please Withdraw</h3>
+            <div class="bg-sky-300 p-8 rounded-xl">
+                <h3 class="text-3xl text-white">Please Withdraw</h3>
 
                 <div class="ml-7 mt-5">
-                    <input class="block w-full px-4 py-2 mb-5 text-1xl" type="email" name="" id="user-email"
+                    <input class="block w-full px-4 py-2 mb-5 text-1xl" type="text" name="" id="user-withdraw"
                         placeholder="$ Amount You Want to Withdraw">
                     <button id="btn-submit"
                         class="bg-amber-700 text-white text-2xl px-4 py-2 rounded-lg">Withdraw</button>
@@ -59,6 +59,7 @@
 
     <!-- JavaScript Link: -->
     <script src="js/login.js"></script>
+    <script src="js/deposit.js"></script>
 </body>
 
 </html>
