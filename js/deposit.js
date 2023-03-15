@@ -4,11 +4,25 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     //console.log('Deposit clicked');
 
     const depositField = document.getElementById('user-deposit');
-    const depositAmount = depositField.value;
-    //console.log(depositAmount);
+    const newDepositAmountString = depositField.value;
+    const newDepositAmount = parseFloat(newDepositAmountString);
 
     const depositTotalElement = document.getElementById('deposit-total');
-    const depositTotal = depositTotalElement.innerText;
-    //console.log(depositTotal);
-    depositTotalElement.innerText = depositAmount;
+    const previousDepositTotalString = depositTotalElement.innerText;
+    const previousDepositTotal = parseFloat(previousDepositTotalString)
+
+    const currentDepositAmount = previousDepositTotal + newDepositAmount;
+
+    depositTotalElement.innerText = currentDepositAmount;
+
+    // Balance Total
+    const balanceTotalElement = document.getElementById('balance-total');
+    const previousBalanceTotalString = balanceTotalElement.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+
+    const currentBalanceAmount = previousBalanceTotal + newDepositAmount;
+
+    balanceTotalElement.innerText = currentBalanceAmount;
+
+    depositField.value = '';
 })
